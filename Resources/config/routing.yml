@@ -1,0 +1,11 @@
+jslogger_list_page:
+    path:      /jslogger/listpage
+    defaults: { _controller: WaigeoJSLoggerBundle:JSLogger:index }
+
+jslogger_savelog:
+    path:      /jslogger/logs/save
+    defaults: { _controller: WaigeoJSLoggerBundle:JSLogger:saveLog }
+
+jslogger_listlogs:
+    path:      /jslogger/logs/list
+    defaults: { _controller: WaigeoJSLoggerBundle:JSLogger:listLogs }

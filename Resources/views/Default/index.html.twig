@@ -1,0 +1,32 @@
+{% extends 'WaigeoJSLoggerBundle::layout.html.twig' %}
+
+{% block pageTitle %}Erreurs JavaScript{% endblock %}
+
+{% block breadcrumb %}
+    <li class="active">Liste des erreurs JavaScript</li>
+{% endblock %}
+
+{% block additionalCss %}
+    <link href="{{ asset('bundles/waigeojslogger/plugins/bower_components/jsgrid/dist/jsgrid.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/waigeojslogger/plugins/bower_components/jsgrid/dist/jsgrid-theme.min.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="white-box">
+        <h3 class="box-title inline">Liste des erreurs JavaScript (<span id="itemsCount">0</span>)</h3>
+        <div id="logsGrid"></div>
+    </div>
+{% endblock %}
+
+{% block additionalScripts %}
+    <script src="{{ asset('bundles/waigeojslogger/plugins/bower_components/jsgrid/dist/jsgrid.min.js') }}"></script>
+    <script src="{{ asset('bundles/waigeojslogger/logsManager.js') }}"></script>
+
+    <script>
+        logsManager.urls = {
+          listLogs: '{{ path('jslogger_listlogs') }}'
+        };
+
+        logsManager.init();
+    </script>
+{% endblock %}

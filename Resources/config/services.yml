@@ -1,0 +1,6 @@
+services:
+    waigeo_js_logger.logsManager:
+        class: Waigeo\JSLoggerBundle\Service\LogsManager
+        arguments: ["@doctrine.orm.entity_manager"]
+    waigeo_js_logger.serializer:
+            class: CDG\AppBundle\Service\Utils\JsonSerializer
