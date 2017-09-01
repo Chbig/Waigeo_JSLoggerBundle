@@ -111,6 +111,7 @@ var logsManager = {
                         }
 
                     }).done(function (response) {
+                        response = JSON.parse(response);
                         if (response.success) {
                             d.resolve(response.data);
                             me.logsCount.text(response.data.itemsCount);

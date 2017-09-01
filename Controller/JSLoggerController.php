@@ -35,8 +35,7 @@ class JSLoggerController extends Controller
         }
 
         $response = $serializer->serialize($response, 'json');
-
-        return JsonResponse::fromJsonString($response);
+        return new JsonResponse($response);
     }
 
     public function listLogsAction(Request $request)
@@ -61,7 +60,6 @@ class JSLoggerController extends Controller
         }
 
         $response = $serializer->serialize($response, 'json');
-
-        return JsonResponse::fromJsonString($response);
+        return new JsonResponse($response);
     }
 }
