@@ -19,7 +19,7 @@
     "sensio/framework-extra-bundle": ">=3.0.2",
     "symfony/assetic-bundle": ">=2.8",
     "symfony/polyfill-apcu": ">=1.0",
-    "symfony/symfony": "3.2.*",
+    "symfony/symfony": "3.*",
     "twig/twig": "1.0||^2.0"
   },
   "require-dev": {
