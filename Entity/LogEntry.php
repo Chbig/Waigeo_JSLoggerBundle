@@ -45,14 +45,14 @@ class LogEntry
     /**
      * @var string
      *
-     * @ORM\Column(name="lineNumber", type="string")
+     * @ORM\Column(name="lineNumber", type="string", nullable=true)
      */
     private $lineNumber;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="colNumber", type="string")
+     * @ORM\Column(name="colNumber", type="string", nullable=true)
      */
     private $colNumber;
 
